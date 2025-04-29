@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import './App.css'
+import './Cssfiles/App.css'
+import './Cssfiles/App.css'
 import ExercisePage from "./Pages/ExercisePage"
 import Review from './Pages/Review.Jsx'
 import Home from './Pages/Home'
