@@ -8,7 +8,7 @@
   }
   
   .background-image {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -17,8 +17,8 @@
     background-size: cover;
     background-position: center;
     z-index: 1;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+    opacity: 0.95;
+    transition: opacity 1s ease-in-out;
   }
   
   .background-image.hidden {
@@ -33,7 +33,8 @@
   }
   #Workoutpick{
     margin-top: 10vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 5.2em;
     line-height: 1.1;
-    color: #6405ad;
+    color: #ffffff;
   }

@@ -5,12 +5,17 @@ import BackgroundImageSection from "../Components/BackgroundimageSection"; // Im
 
 function Home(){
     return <div className="Home">
+        /*use GSAP*/
         <BackgroundImageSection />
         <div className="img"></div>
         <div className="img-text">
             <h1>Choose your first workout!</h1>
         </div>
         <div id="effect">
+            <p>Start a Workout!</p>
+            <p>Start a Workout!</p>
+            <p>Start a Workout!</p>
+            <p>Start a Workout!</p>
             <p>Start a Workout!</p>
         </div>
         

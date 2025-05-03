@@ -5,10 +5,10 @@ function ExercisePage(){
 
     const exercises = [
         { id: 1, name: "Pushups", info: "A basic upper body exercise.", url: "https://training.fit/wp-content/uploads/2020/02/liegestuetze-800x448.png" },
-        { id: 2, name: "Squats", info: "Strengthens legs and glutes.", url: "https://example.com/squats.png" },
-        { id: 3, name: "Situps", info: "Core strengthening exercise.", url: "https://example.com/situps.png" },
-        { id: 4, name: "Lunges", info: "Improves balance and leg strength.", url: "https://example.com/lunges.png" },
-        { id: 5, name: "Plank", info: "Great for core stability.", url: "https://example.com/plank.png" },
+        { id: 2, name: "Squats", info: "Strengthens legs and glutes.", url: "https://img.freepik.com/free-photo/sporty-athletic-woman-squatting-doing-sit-ups-gym-isolated-white-wall_231208-1728.jpg?semt=ais_hybrid&w=740" },
+        { id: 3, name: "Situps", info: "Core strengthening exercise.", url: "https://img.freepik.com/premium-photo/indian-man-making-abdominal-exercises-home_380164-226027.jpg?ga=GA1.1.262417993.1746284824&semt=ais_hybrid&w=740" },
+        { id: 4, name: "Lunges", info: "Improves balance and leg strength.", url: "https://img.freepik.com/free-photo/autumn-fitness-outdoors-high-lunge-exercises_1163-2701.jpg?ga=GA1.1.262417993.1746284824&semt=ais_hybrid&w=740" },
+        { id: 5, name: "Plank", info: "Great for core stability.", url: "https://img.freepik.com/free-photo/full-length-portrait-pretty-fit-sportsgirl-doing-plank_171337-9001.jpg?ga=GA1.1.262417993.1746284824&semt=ais_hybrid&w=740" },
         { id: 6, name: "Burpees", info: "Full-body cardio exercise.", url: "https://example.com/burpees.png" },
         { id: 7, name: "Pullups", info: "Strengthens back and arms.", url: "https://example.com/pullups.png" },
         { id: 8, name: "Mountain Climbers", info: "Cardio and core workout.", url: "https://example.com/mountain_climbers.png" },
@@ -42,7 +42,7 @@ function ExercisePage(){
         </form>
         <div className = "exercise-grid">
             {exercises.map((exercise) =>(
-                exercise.name.toLowerCase().startsWith(searchQuery) && <Exercise exercise={exercise} key = {exercise.id}/>
+                exercise.name.toLowerCase().startsWith(searchQuery.toLowerCase()) && <Exercise exercise={exercise} key = {exercise.id}/>
                 ))}
         </div>
     </div>

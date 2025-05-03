@@ -123,6 +123,9 @@ button:focus-visible {
 .navbar-links a:hover {
   color: #646cff;
 }
+.exercises{
+  margin-top: 20vh;
+}
 .exercise-grid {
   display: flex; /* Use flexbox for horizontal alignment */
   flex-wrap: wrap; /* Allow wrapping to the next row if needed */
@@ -130,13 +133,21 @@ button:focus-visible {
   justify-content: center; /* Center items horizontally */
   padding: 16px;
 }
+.search-form {
+  position: fixed; /* Keeps the search form fixed in the viewport */
+  top: 15vh; /* Distance from the top of the viewport */
+  right: 16px; /* Distance from the right edge of the viewport */
+  z-index: 10; /* Ensure it stays above other elements */
+  padding: 8px; /* Optional: Add padding for better spacing */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
 
 .exercise-item {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 16px;
-  width: 200px; /* Set a fixed width for each item */
+  flex: 1 1 calc(15% - 16px); /* Each item takes 20% of the row minus the gap */
+  max-width: calc(15% - 16px); /* Ensure the max width is 20% minus the gap */
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

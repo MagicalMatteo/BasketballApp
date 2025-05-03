@@ -6,7 +6,7 @@ const BackgroundImageSection = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 200) {
         setIsVisible(false);
       } else {
         setIsVisible(true);

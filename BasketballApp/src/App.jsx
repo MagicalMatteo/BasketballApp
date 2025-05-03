@@ -4,6 +4,7 @@ import './Cssfiles/App.css'
 import ExercisePage from "./Pages/ExercisePage"
 import Review from './Pages/Review.Jsx'
 import Home from './Pages/Home'
+import Workoutpage from './Pages/WorkoutPage'
 import {Routes, Route} from 'react-router-dom'
 import Navbar from './Components/Navbar'
 
@@ -17,6 +18,7 @@ function App() {
     <main className='main-content'>
       <Routes>
         <Route path = "/" element = {<Home/>}/>
+        <Route path = "/Workouts" element = {<Workoutpage/>}/>
         <Route path = "/Exercises" element = {<ExercisePage/>}/>
         <Route path = "/Review" element = {<Review/>}/>
       </Routes>

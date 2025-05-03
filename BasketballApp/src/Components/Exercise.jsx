@@ -12,16 +12,17 @@ function Exercise({exercise}){
                     alt={`Add ${exercise.name} to Workout`}
                     className="button-icon"
                 />
+                    <div className="workout-description">
+                        <h3>{exercise.name}</h3>
+                        <p>{exercise.info}</p>
+                    </div>
                 </button>
                 
 
             </div>
 
         </div>
-        <div className="workout-description">
-            <h3>{exercise.name}</h3>
-            <p>{exercise.info}</p>
-        </div>
+        
 
     </div>
 
