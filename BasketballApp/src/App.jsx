@@ -1,19 +1,42 @@
-import { useState } from 'react'
-import './Cssfiles/App.css'
+import { useState, useEffect } from 'react'
 import './Cssfiles/App.css'
 import ExercisePage from "./Pages/ExercisePage"
 import Review from './Pages/Review.Jsx'
 import Home from './Pages/Home'
 import Workoutpage from './Pages/WorkoutPage'
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, useLocation} from 'react-router-dom'
 import Navbar from './Components/Navbar'
+import Login from './Components/Loginform'
 
 
 function App() {
+  const location = useLocation();
   const [count, setCount] = useState(0)
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login status
+
+  useEffect(() => {
+    // Check if the user navigates to protected routes
+    const protectedRoutes = ['/Workouts', '/Exercises', '/Review'];
+    if (protectedRoutes.includes(location.pathname) && !isLoggedIn) {
+      setIsLoginModalOpen(true); // Show login modal if not logged in
+    } else {
+      setIsLoginModalOpen(false); // Hide modal for other routes
+    }
+  }, [location, isLoggedIn]);
+
+  const handleLoginSuccess = () => {
+    setIsLoggedIn(true); // Set login status to true
+    setIsLoginModalOpen(false); // Close the modal
+  };
 
   return (
     <div>
+    <Login 
+    isOpen={isLoginModalOpen} 
+    onClose={()=>setIsLoginModalOpen(false)} 
+    onLoginSucess={handleLoginSuccess}
+    />
     <Navbar/>
     <main className='main-content'>
       <Routes>
@@ -27,4 +50,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
