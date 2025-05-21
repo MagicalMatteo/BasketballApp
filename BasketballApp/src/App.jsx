@@ -7,6 +7,7 @@ import Workoutpage from './Pages/WorkoutPage'
 import {Routes, Route, useLocation} from 'react-router-dom'
 import Navbar from './Components/Navbar'
 import Login from './Components/Loginform'
+import AccountCreationPage from './Pages/AccountCreationPage'
 
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
     <Login 
     isOpen={isLoginModalOpen} 
     onClose={()=>setIsLoginModalOpen(false)} 
-    onLoginSucess={handleLoginSuccess}
+    onLoginSuccess={handleLoginSuccess}
     />
     <Navbar/>
     <main className='main-content'>
@@ -44,6 +45,7 @@ function App() {
         <Route path = "/Workouts" element = {<Workoutpage/>}/>
         <Route path = "/Exercises" element = {<ExercisePage/>}/>
         <Route path = "/Review" element = {<Review/>}/>
+        <Route path = "/AccountCreationPage" element = {<AccountCreationPage/>}/>
       </Routes>
     </main>
     </div>

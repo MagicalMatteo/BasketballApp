@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../Cssfiles/modal.css';
 
@@ -6,6 +7,7 @@ function Login({isOpen, onClose, onLoginSuccess}) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [token, setToken] = useState(null); // store auth token
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -19,7 +21,6 @@ function Login({isOpen, onClose, onLoginSuccess}) {
       const receivedToken = response.data.token;
       setToken(receivedToken);
 
-      // Optional: store token in localStorage
       localStorage.setItem('authToken', receivedToken);
 
       console.log('Login successful!');
@@ -49,7 +50,7 @@ function Login({isOpen, onClose, onLoginSuccess}) {
           />
           <button type="submit">Login</button>
         </form>
-        <button onClick={onClose}>Close</button>
+        <button onClick={() => navigate('/AccountCreationPage')}>Create Account </button>
       </div>
     </div>
   );
