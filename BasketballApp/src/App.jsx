@@ -45,7 +45,7 @@ function App() {
         <Route path = "/Workouts" element = {<Workoutpage/>}/>
         <Route path = "/Exercises" element = {<ExercisePage/>}/>
         <Route path = "/Review" element = {<Review/>}/>
-        <Route path = "/AccountCreationPage" element = {<AccountCreationPage/>}/>
+        <Route path = "/AccountCreationPage" element = {<AccountCreationPage setIsLoggedIn={setIsLoggedIn}/>}/>
       </Routes>
     </main>
     </div>
